@@ -214,6 +214,36 @@
       .refuge-buy { white-space: nowrap; }
       .refuge-unlock.can .refuge-buy { border-color: #8fd4f5; color: #8fd4f5; }
       .refuge-actions { display: flex; gap: 10px; margin-top: 6px; }
+      /* Continuar expedición (F1.7.11) */
+      .title-continue {
+        border-color: var(--torch) !important;
+        color: var(--torch) !important;
+        margin-bottom: 6px;
+      }
+      /* Escena de transición entre niveles (F1.7.12) */
+      .level-name {
+        font-size: 34px;
+        letter-spacing: 0.45em;
+        color: var(--torch);
+        text-shadow: 0 0 24px rgba(232, 161, 60, 0.4);
+        font-weight: 700;
+        margin-left: 0.45em;
+      }
+      .level-sub { font-size: 14px; opacity: 0.8; letter-spacing: 0.2em; }
+      .level-bar { display: flex; gap: 8px; margin: 14px 0 4px; }
+      .level-seg {
+        width: 44px;
+        height: 10px;
+        border: 1px solid var(--stone);
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      .level-seg.done { background: var(--stone); }
+      .level-seg.current {
+        background: var(--torch);
+        box-shadow: 0 0 10px rgba(232, 161, 60, 0.7);
+      }
+      .level-saved { font-size: 10.5px; color: #8fd4f5; opacity: 0.8; letter-spacing: 0.12em; margin-bottom: 8px; }
       /* Anuncio del cofre del Nido (F1.7.9) */
       .refuge-chest {
         background: #140c06;
@@ -545,7 +575,7 @@
       footer { font-size: 11px; opacity: 0.5; text-align: center; line-height: 1.7; }
       footer code { color: var(--torch); }
     </style>
-    <script type="module" crossorigin src="./assets/index-DCKh4MWF.js"></script>
+    <script type="module" crossorigin src="./assets/index-Pq4HBb1H.js"></script>
   </head>
   <body>
     <header>

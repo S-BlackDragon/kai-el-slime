@@ -267,15 +267,46 @@
       .touch-btn {
         pointer-events: auto;
         touch-action: none;
-        width: 52px;
-        height: 52px;
+        width: 56px;
+        height: 56px;
         border-radius: 50%;
         border: 2px solid rgba(216, 201, 180, 0.4);
         background: rgba(10, 6, 3, 0.6);
         color: #f2e2c8;
-        font-size: 20px;
+        font-size: 17px;
         font-family: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.1;
+        padding: 0;
       }
+      .touch-btn small { font-size: 8.5px; opacity: 0.85; letter-spacing: 0.03em; }
+      /* Ayuda de primera vez en táctil */
+      .touch-help {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(5, 3, 1, 0.82);
+        pointer-events: auto;
+        touch-action: none;
+        z-index: 40;
+        line-height: 1.9;
+      }
+      .touch-help-card {
+        background: rgba(10, 6, 3, 0.95);
+        border: 1px solid var(--stone);
+        border-radius: 10px;
+        padding: 18px 24px;
+        font-size: 13px;
+        max-width: 88%;
+      }
+      .touch-help-card b { color: var(--torch); }
+      .touch-help-title { color: var(--torch); letter-spacing: 0.25em; font-size: 15px; margin-bottom: 6px; text-align: center; }
+      .touch-help-go { margin-top: 10px; text-align: center; opacity: 0.6; font-size: 11px; animation: toast-fade 2.6s infinite; }
       .touch-btn:active { background: rgba(232, 161, 60, 0.4); }
       .touch-btn[hidden] { display: none; }
 
@@ -502,7 +533,7 @@
       footer { font-size: 11px; opacity: 0.5; text-align: center; line-height: 1.7; }
       footer code { color: var(--torch); }
     </style>
-    <script type="module" crossorigin src="./assets/index-DO0QsMvq.js"></script>
+    <script type="module" crossorigin src="./assets/index-aN9wS4Tu.js"></script>
   </head>
   <body>
     <header>

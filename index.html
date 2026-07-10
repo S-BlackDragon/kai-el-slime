@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
     <title>Kai — Fase 0.5</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>" />
     <style>
       :root {
         --dungeon: #1a120b;
@@ -422,6 +423,27 @@
       .rotate-hint small { display: block; font-size: 10px; opacity: 0.65; margin-top: 2px; }
       .hud-near-price.ok { color: #f2c14e; }
       .hud-near-price.no { color: #e24b4a; }
+      /* Mute de audio (F1.5.6) — también con la tecla M */
+      .audio-toggle {
+        position: absolute;
+        right: 12px;
+        bottom: 26px;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 201, 180, 0.3);
+        background: rgba(10, 6, 3, 0.55);
+        font-size: 15px;
+        cursor: pointer;
+        z-index: 6;
+        opacity: 0.75;
+      }
+      .audio-toggle:hover { opacity: 1; }
+      .touch-mode .audio-toggle {
+        right: calc(12px + env(safe-area-inset-right));
+        bottom: auto;
+        top: calc(104px + env(safe-area-inset-top));
+      }
       /* Slot de usable con recarga (F1.1, GDD §6.4) */
       .hud-usable {
         position: absolute;
@@ -575,7 +597,7 @@
       footer { font-size: 11px; opacity: 0.5; text-align: center; line-height: 1.7; }
       footer code { color: var(--torch); }
     </style>
-    <script type="module" crossorigin src="./assets/index-Pq4HBb1H.js"></script>
+    <script type="module" crossorigin src="./assets/index-2-ksPG9u.js"></script>
   </head>
   <body>
     <header>

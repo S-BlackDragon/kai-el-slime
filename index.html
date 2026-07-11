@@ -479,6 +479,44 @@
         bottom: auto;
         top: calc(104px + env(safe-area-inset-top));
       }
+      /* Menú de ajustes (F1.5.7) */
+      .menu-toggle {
+        position: absolute;
+        right: 52px;
+        bottom: 26px;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 201, 180, 0.3);
+        background: rgba(10, 6, 3, 0.55);
+        color: #d8c9b4;
+        font-size: 17px;
+        cursor: pointer;
+        z-index: 6;
+        opacity: 0.75;
+      }
+      .menu-toggle:hover { opacity: 1; }
+      .touch-mode .menu-toggle {
+        right: calc(52px + env(safe-area-inset-right));
+        bottom: auto;
+        top: calc(104px + env(safe-area-inset-top));
+      }
+      .screen-menu { background: rgba(10, 6, 3, 0.9); }
+      .menu-title { color: var(--torch); letter-spacing: 0.3em; font-size: 18px; margin-bottom: 10px; }
+      .menu-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: #140c06;
+        border: 1px solid #4a2f1e;
+        border-radius: 6px;
+        padding: 14px 18px;
+        min-width: min(260px, 84vw);
+        margin-bottom: 12px;
+      }
+      .menu-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; }
+      .menu-row input[type='range'] { width: 140px; accent-color: var(--torch); }
+      .menu-hint { margin-top: 10px; font-size: 10.5px; opacity: 0.55; }
       /* Slot de usable con recarga (F1.1, GDD §6.4) */
       .hud-usable {
         position: absolute;
@@ -632,7 +670,7 @@
       footer { font-size: 11px; opacity: 0.5; text-align: center; line-height: 1.7; }
       footer code { color: var(--torch); }
     </style>
-    <script type="module" crossorigin src="./assets/index-Bg4Sq4UF.js"></script>
+    <script type="module" crossorigin src="./assets/index-CV4m0NKz.js"></script>
   </head>
   <body>
     <header>

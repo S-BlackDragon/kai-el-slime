@@ -70,7 +70,7 @@
         gap: 4px;
         filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
       }
-      .hud-heart { width: 22px; height: 20px; }
+      .hud-heart { width: 30px; height: 27px; }
       .hud-center {
         position: absolute;
         inset: 0;
@@ -98,13 +98,13 @@
         max-height: 86%;
         overflow-y: auto;
       }
-      .hud-msg { font-size: 22px; color: #dff5ff; letter-spacing: 0.06em; }
-      .hud-sub { font-size: 12px; color: var(--text); opacity: 0.85; }
+      .hud-msg { font-size: 26px; color: #dff5ff; letter-spacing: 0.06em; }
+      .hud-sub { font-size: 14px; color: var(--text); opacity: 0.85; }
       .hud-seed {
         position: absolute;
         right: 12px;
         bottom: 10px;
-        font-size: 10px;
+        font-size: 12px;
         opacity: 0.5;
         letter-spacing: 0.08em;
       }
@@ -112,8 +112,8 @@
       .hud-wallet {
         position: absolute;
         left: 14px;
-        bottom: 66px;
-        font-size: 13px;
+        bottom: 76px;
+        font-size: 18px;
         color: #f2e2c8;
         text-shadow: 0 1px 3px #000;
         letter-spacing: 0.04em;
@@ -395,7 +395,7 @@
       .touch-mode .hud-usable-icon { width: 26px; height: 26px; }
       .touch-mode .hud-toasts { left: calc(14px + env(safe-area-inset-left)); top: calc(104px + env(safe-area-inset-top)); }
       .touch-mode .hud-items { pointer-events: none; right: auto; left: 50%; transform: translateX(-50%); top: calc(8px + env(safe-area-inset-top)); }
-      .touch-mode .hud-minimap { right: calc(12px + env(safe-area-inset-right)); top: calc(12px + env(safe-area-inset-top)); transform: scale(0.75); transform-origin: top right; }
+      .touch-mode .hud-minimap { right: calc(12px + env(safe-area-inset-right)); top: calc(12px + env(safe-area-inset-top)); transform: scale(0.85); transform-origin: top right; }
       .touch-mode .hud-near { bottom: auto; top: calc(56px + env(safe-area-inset-top)); max-width: min(380px, 92%); }
       .touch-mode .hud-seed { right: auto; left: 50%; transform: translateX(-50%); bottom: calc(4px + env(safe-area-inset-bottom)); }
 
@@ -448,9 +448,9 @@
       .hud-usable {
         position: absolute;
         left: 14px;
-        bottom: 12px;
-        width: 44px;
-        height: 44px;
+        bottom: 14px;
+        width: 54px;
+        height: 54px;
         border: 2px solid rgba(216, 201, 180, 0.35);
         border-radius: 6px;
         background: rgba(0, 0, 0, 0.45);
@@ -459,10 +459,10 @@
         justify-content: center;
       }
       .hud-usable[hidden] { display: none; }
-      .hud-usable-b { left: 64px; }
+      .hud-usable-b { left: 76px; }
       .hud-usable.ready { border-color: var(--torch); box-shadow: 0 0 10px rgba(232, 161, 60, 0.35); }
       .hud-usable.active { border-color: #8fd4f5; box-shadow: 0 0 12px rgba(143, 212, 245, 0.5); }
-      .hud-usable-icon { width: 32px; height: 32px; image-rendering: pixelated; }
+      .hud-usable-icon { width: 40px; height: 40px; image-rendering: pixelated; }
       .hud-usable-cd {
         position: absolute;
         inset: 0;
@@ -476,19 +476,19 @@
       /* Toasts de items/procs (GDD §9.5) */
       .hud-toasts {
         position: absolute;
-        top: 44px;
-        left: 168px; /* a la derecha de la columna de stats */
+        top: 52px;
+        left: 200px; /* a la derecha de la columna de stats */
         display: flex;
         flex-direction: column;
         gap: 4px;
       }
       .hud-toast {
-        font-size: 12px;
+        font-size: 15px;
         color: #dff5ff;
         text-shadow: 0 1px 3px #000;
         animation: toast-fade 2.6s forwards;
       }
-      .hud-toast-delta { color: #9de07f; font-size: 11px; }
+      .hud-toast-delta { color: #9de07f; font-size: 13.5px; }
       @keyframes toast-fade {
         0% { opacity: 0; transform: translateY(-4px); }
         10% { opacity: 1; transform: translateY(0); }
@@ -504,22 +504,22 @@
         gap: 4px;
         pointer-events: auto;
       }
-      .hud-item { position: relative; width: 30px; height: 30px;
+      .hud-item { position: relative; width: 38px; height: 38px;
         border: 1px solid rgba(216, 201, 180, 0.25); border-radius: 4px;
         background: rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center; }
-      .hud-item img { width: 22px; height: 22px; image-rendering: pixelated; }
+      .hud-item img { width: 30px; height: 30px; image-rendering: pixelated; }
       .hud-item-tip {
         display: none;
         position: absolute;
         top: 34px;
         right: 0;
         width: max-content;
-        max-width: 240px;
+        max-width: 280px;
         background: rgba(10, 6, 3, 0.95);
         border: 1px solid var(--stone);
         border-radius: 4px;
-        padding: 6px 8px;
-        font-size: 11px;
+        padding: 7px 9px;
+        font-size: 13px;
         line-height: 1.5;
         color: var(--text);
         z-index: 5;
@@ -529,20 +529,20 @@
       /* Panel de stats (Tab) — estilo Isaac: columna IZQUIERDA con iconos */
       .hud-stats {
         position: absolute;
-        top: 44px;
+        top: 52px;
         left: 14px;
-        min-width: 132px;
+        min-width: 168px;
         background: rgba(10, 6, 3, 0.55);
         border: 1px solid rgba(74, 47, 30, 0.6);
         border-radius: 4px;
-        padding: 6px 8px;
-        font-size: 11px;
+        padding: 8px 10px;
+        font-size: 13.5px;
         line-height: 1.7;
       }
       .hud-stats[hidden] { display: none; }
-      .hud-stats-title { color: var(--torch); letter-spacing: 0.12em; font-size: 9px; margin-bottom: 3px; opacity: 0.8; }
+      .hud-stats-title { color: var(--torch); letter-spacing: 0.12em; font-size: 11px; margin-bottom: 3px; opacity: 0.8; }
       .hud-stats-row { display: flex; align-items: center; gap: 6px; opacity: 0.95; }
-      .hud-stats-icon { width: 16px; text-align: center; font-size: 11px; filter: drop-shadow(0 1px 1px #000); }
+      .hud-stats-icon { width: 20px; text-align: center; font-size: 14px; filter: drop-shadow(0 1px 1px #000); }
       .hud-stats-name { flex: 1; opacity: 0.85; }
       .hud-stats-value { color: #f2e2c8; font-weight: 600; }
       /* Minimapa estilo Isaac (F1.2) */
@@ -554,12 +554,12 @@
       }
       .hud-map-cell {
         position: absolute;
-        width: 12px;
-        height: 12px;
+        width: 17px;
+        height: 17px;
         border: 1px solid rgba(216, 201, 180, 0.35);
         background: rgba(20, 12, 6, 0.55);
-        font-size: 9px;
-        line-height: 11px;
+        font-size: 12px;
+        line-height: 16px;
         text-align: center;
         color: var(--torch);
       }
@@ -580,24 +580,24 @@
         display: flex;
         gap: 10px;
         align-items: flex-start;
-        max-width: 380px;
+        max-width: 460px;
         background: rgba(10, 6, 3, 0.92);
         border: 1px solid var(--stone);
         border-radius: 6px;
-        padding: 8px 12px;
-        font-size: 11.5px;
+        padding: 10px 14px;
+        font-size: 14px;
         line-height: 1.55;
       }
       .hud-near[hidden] { display: none; }
-      .hud-near img { width: 30px; height: 30px; image-rendering: pixelated; margin-top: 2px; }
-      .hud-near b { color: var(--torch); font-size: 12.5px; }
-      .hud-near-rar { opacity: 0.55; font-size: 10px; letter-spacing: 0.08em; }
+      .hud-near img { width: 40px; height: 40px; image-rendering: pixelated; margin-top: 2px; }
+      .hud-near b { color: var(--torch); font-size: 15.5px; }
+      .hud-near-rar { opacity: 0.55; font-size: 12px; letter-spacing: 0.08em; }
       .hud-near-diff { color: #9de07f; }
       .hud-near i { display: block; opacity: 0.55; margin-top: 2px; }
       footer { font-size: 11px; opacity: 0.5; text-align: center; line-height: 1.7; }
       footer code { color: var(--torch); }
     </style>
-    <script type="module" crossorigin src="./assets/index-D-4GQnbn.js"></script>
+    <script type="module" crossorigin src="./assets/index-C-u3N-Vn.js"></script>
   </head>
   <body>
     <header>
@@ -611,6 +611,6 @@
       WASD mover · ratón apuntar · clic disparar · espacio/clic-der usable · shift dash · E comprar · R reiniciar<br />
       consola: <code>__game.state()</code> · <code>__game.press('up', 500)</code> ·
       <code>__game.tick(60)</code>
-    </footer>
+    </footer>
   </body>
 </html>

@@ -281,6 +281,24 @@
         font-size: 12.5px;
         z-index: 30;
       }
+      .net-status {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: 11px;
+        color: #7fa8c9;
+        background: rgba(10, 6, 3, 0.5);
+        padding: 3px 8px;
+        border-radius: 4px;
+        z-index: 7;
+        pointer-events: none;
+        opacity: 0.7;
+      }
+      .net-status.net-waiting {
+        color: #f5c98f;
+        opacity: 1;
+        animation: toast-fade 1.2s infinite;
+      }
       /* Ruleta del cofre del Nido */
       .screen-roulette { background: rgba(10, 6, 3, 0.9); }
       .roulette-title { color: var(--torch); letter-spacing: 0.3em; font-size: 18px; }
@@ -694,7 +712,7 @@
       footer { font-size: 11px; opacity: 0.5; text-align: center; line-height: 1.7; }
       footer code { color: var(--torch); }
     </style>
-    <script type="module" crossorigin src="./assets/index-DuH428Bh.js"></script>
+    <script type="module" crossorigin src="./assets/index-DdpGpjEI.js"></script>
   </head>
   <body>
     <header>
